@@ -44,3 +44,10 @@ input, select {
 option {
    color: #000;
 }
+@media screen and (max-width: 767px) {
+   .grad, .grad2 {
+      width: 300px;
+      height: auto;
+      display: none;
+   }
+}

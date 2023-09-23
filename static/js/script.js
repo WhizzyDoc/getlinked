@@ -74,8 +74,8 @@ $(document).ready(function () {
       topic != "" &&
       category != "" &&
       phone != "" &&
-      group_size != "" &&
-      agree.checked;
+      group_size != "";
+    //agree.is(":checked");
     if (!pattern) {
       swal("Oops!", "Invalid Entries", "error");
       return;
