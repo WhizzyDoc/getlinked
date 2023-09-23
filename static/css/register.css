@@ -26,6 +26,9 @@
    left: -100px;
    top: -70px;
 }
+.part {
+   color: #fff;
+}
 .grad2 {
    right: -250px;
    top: 50px;
@@ -37,4 +40,7 @@ label {
 input, select {
    background: transparent !important;
    color: #fff !important;
+}
+option {
+   color: #000;
 }

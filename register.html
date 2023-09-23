@@ -10,10 +10,12 @@
     />
     <link rel="stylesheet" href="static/css/bootstrap.min.css" />
     <link rel="stylesheet" href="static/css/fontawesome.css" />
+    <link rel="stylesheet" href="static/css/sweetalert.min.css" />
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="static/css/register.css" />
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/sweetalert.min.js"></script>
   </head>
   <body>
     <div class="nav">
@@ -62,8 +64,8 @@
         </h2>
         <div class="part">Be part of this environment</div>
         <p>CREATE YOUR ACCOUNT</p>
-        <div class="form">
-          <form action="" class="row">
+        <div class="form" style="padding-right: 20px">
+          <form action="" class="row" id="register-form">
             <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <label for="name">Team's Name</label>
               <input
@@ -107,25 +109,36 @@
             <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <label for="category">Category</label>
               <select class="form-control" id="category">
-                <option selected disabled>Select Category</option>
+                <option selected value="">Select Category</option>
               </select>
             </div>
 
             <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
               <label for="group_size">Group Size</label>
               <select class="form-control" id="group_size">
-                <option selected disabled>Select</option>
+                <option selected value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
               </select>
             </div>
 
             <div
               class="form-check col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2"
             >
-              <p class="text-design">
+              <p class="text-design" style="color: #dc0398">
                 <i>Please review your registration details before submitting</i>
               </p>
               <label class="form-check-label">
-                <input type="checkbox" class="form-check-input" value="" />
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="agree"
+                  value=""
+                />
                 I agreed with the event terms and conditions and privacy policy
               </label>
             </div>
@@ -142,28 +155,8 @@
       </section>
     </main>
 
+    <script src="static/js/script.js"></script>
     <script>
-      var cat_url = "https://backend.getlinked.ai/hackathon/categories-list";
-      fetch(cat_url, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        redirect: "follow",
-      })
-        .then((response) => {
-          return response.json();
-        })
-        .then((data) => {
-          console.log(data);
-          for (var i in data) {
-            var temp = `<option value="${data[i].id}">${data[i].name}</option>`;
-            $("#category").append(temp);
-          }
-        })
-        .catch((error) => {
-          console.log("error: " + error);
-        });
       /*
         $.ajax({
             success: function() {},
