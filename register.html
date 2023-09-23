@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat|Clash Display"
+    />
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/register.css" />
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="closen">
+        <div class="fa fa-times closenav"></div>
+      </div>
+      <ul>
+        <li><a href="#">Timeline</a></li>
+        <li><a href="./index.html">Overview</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li>
+          <a href="./register.html"><button>Register</button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <header class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="title">get<span class="text-design">linked</span></div>
+        <div class="fa fa-navicon opennav"></div>
+        <nav>
+          <ul>
+            <li><a href="#">Timeline</a></li>
+            <li><a href="./index.html">Overview</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li>
+              <a href="./register.html"><button>Register</button></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <section class="registration">
+      <img src="./image/registartion.png" alt="" />
+      <div id="forms_div">
+        <h3>Register</h3>
+        <div class="part">Be part of this environment</div>
+        <p>CREATE YOUR ACCOUNT</p>
+        <div class="form">
+          <form action="">
+            <div class="label_div">
+              <label for="team_name" name="team_name">teams's Name</label>
+              <input
+                type="text"
+                id="team_name"
+                placeholder="Enter the name of your group"
+              />
+            </div>
+            <div class="label_div">
+              <label for="email" name="email">Email</label>
+              <input
+                type="text"
+                id="email"
+                placeholder="Enter your email address"
+              />
+            </div>
+            <div class="label_div">
+              <label for="category" name="category">Category</label>
+              <select class="category" id="category" name="grade">
+                <option selected disabled>Select Category</option>
+              </select>
+            </div>
+            <div class="label_div">
+              <label for="phone_number">Phone</label>
+              <input
+                type="number"
+                id="phone_number"
+                placeholder="Enter your phone number"
+              />
+            </div>
+            <div class="label_div">
+              <label for="project_topic">Project Topic</label>
+              <input
+                type="text"
+                id="project_topic"
+                placeholder="What is your group progect topic"
+              />
+            </div>
+            <div class="label_div">
+              <label for="group_size" name="group-size">Category</label>
+              <select class="group_size" id="group_size" name="grade">
+                <option selected disabled></option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      var cat_url = "https://backend.getlinked.ai/hackathon/categories-list";
+      fetch(cat_url, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        redirect: "follow",
+      })
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          for (var i in data) {
+            var temp = `<option value="${data[i].id}">${data[i].name}</option>`;
+            $("#category").append(temp);
+          }
+        })
+        .catch((error) => {
+          console.log("error: " + error);
+        });
+      /*
+        $.ajax({
+            success: function() {},
+            error: 
+        })
+        */
+    </script>
+  </body>
+</html>

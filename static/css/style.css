@@ -6,6 +6,13 @@
 a:link {
     text-decoration: none;
 }
+:root{
+    --text-white: #fff;
+    --text-purple: #903aff;
+    --text-indigo: #150e28;
+    --text-pink: #fe34b9;
+    --text-red: #dc0398;
+ }
 a:hover {
     cursor: pointer;
 }
@@ -16,8 +23,8 @@ body {
     margin: 0;
     padding: 0;
     background: #150e28;
-    overflow-x: hidden;
-    width:100%;
+      overflow-x: hidden;
+  width:100%;
 }
 main {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -183,6 +190,9 @@ ul li a:hover, ul li a.active {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+ul li a:hover button, ul li a.active button, button:hover {
+    color: #fff !important;
 }
 nav ul li a:hover button {color:#fff}
 button {

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat|Clash Display"
+    />
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/css/fontawesome.css" />
+    <link rel="stylesheet" href="static/css/sweetalert.min.css" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link rel="stylesheet" href="static/css/contact.css" />
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <div class="nav">
+      <div class="closen">
+        <div class="fa fa-times closenav"></div>
+      </div>
+      <ul>
+        <li><a href="#">Timeline</a></li>
+        <li><a href="./index.html">Overview</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a class="active" href="./contact.html">Contact</a></li>
+        <li>
+          <a href="./register.html"><button>Register</button></a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
+      <header class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="title">get<span class="text-design">linked</span></div>
+        <div class="fa fa-navicon opennav"></div>
+        <nav>
+          <ul>
+            <li><a href="#">Timeline</a></li>
+            <li><a href="./index.html">Overview</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a class="active" href="./contact.html">Contact</a></li>
+            <li>
+              <a href="./register.html"><button>Register</button></a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+
+    <section class="wrapper">
+      <div class="container">
+        <div class="left">
+          <img class="grad" src="./static/image/grad.png" alt="" />
+          <img class="star-light" src="static/image/starr.png" alt="" />
+          <h3 class="text-design">Get in touch</h3>
+          <p>Contact <br />information</p>
+          <p>27, Alara street <br />Yaba 100012 <br />Lagos State</p>
+          <p>Call Us : 07067981819</p>
+          <p>We are open from Monday-Friday <br />08:00am - 05:00pm</p>
+
+          <div class="contact_icons">
+            <p style="color: #903aff" class="last_child">Share on</p>
+            <img src="./static/image/mdi_instagram.svg" alt="" />
+            <img src="./static/image/mdi_instagram.svg" alt="" />
+            <img src="./static/image/mdi_instagram.svg" alt="" />
+            <img src="./image/mdi_instagram.svg" alt="" />
+          </div>
+        </div>
+        <div class="right">
+          <img class="grad2" src="./static/image/grad.png" alt="" />
+          <img class="starp" src="static/image/star1.png" alt="" />
+          <img class="star-gray" src="static/image/star.png" alt="" />
+          <h4 class="text-design">
+            Questions or need assistance? <br />Let us know about it!
+          </h4>
+          <form action="#" id="contact-form">
+            <input
+              type="text"
+              name="name"
+              id="first_name"
+              placeholder="First Name"
+              required
+            />
+            <input type="email" id="email" placeholder="Mail" required />
+            <textarea
+              name=""
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button class="contact-btn" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
