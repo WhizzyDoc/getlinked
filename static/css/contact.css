@@ -156,7 +156,7 @@ input[type="text"], input[type="email"], textarea{
     background-color: inherit;
     padding: 15px;
     border-radius: 5px;
-    width: 80%;
+    width: 100%;
     margin: 15px auto;
     outline: none;
     color: var(--text1);
@@ -204,5 +204,9 @@ button:hover {color:#fff !important}
    }
    .container .left {
       text-align: center;
+   }
+   .container .right {
+      padding: 10px;
+      margin-top: 20px;
    }
 }
