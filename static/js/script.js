@@ -64,7 +64,7 @@ $(document).ready(function () {
     var email = $("#email").val();
     var topic = $("#topic").val();
     var category = $("#category").val();
-    var phone = $("#phone");
+    var phone = $("#phone").val();
     var group_size = $("#group_size").val();
     var agree = $("#agree");
 
