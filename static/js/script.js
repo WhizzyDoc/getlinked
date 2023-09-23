@@ -90,7 +90,7 @@ $(document).ready(function () {
         team_name: name,
         email: email,
         group_size: parseInt(group_size),
-        phone_number: phone,
+        phone_number: toString(phone),
         project_topic: topic,
         category: parseInt(category),
         privacy_policy_accepted: true,
