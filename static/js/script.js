@@ -16,24 +16,27 @@ $(document).ready(function () {
       swal("Oops!", "Invalid Entries", "error");
       return;
     } else {
-      var register_url = "https://backend.getlinked.ai/hackathon/registration";
+      var contact_url = "https://backend.getlinked.ai/hackathon/contact-form";
       // var formData = new FormData();
       // formData.append("name", name);
       // formData.append("email", email);
       // formData.append("message", message);
 
+      var formData = JSON.stringify({
+        first_name: name,
+        email: email,
+        message: message,
+        phone_number: "07026771744",
+      });
+
       $(this).html("Submitting...");
 
-      fetch(register_url, {
+      fetch(contact_url, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          message: message,
-        }),
+        body: formData,
       })
         .then((response) => {
           return response.json();
@@ -41,6 +44,10 @@ $(document).ready(function () {
         .then((data) => {
           console.log(data);
           swal("Success!", "Your form has been submitted", "success");
+          $("#first_name").val("");
+          $("#email").val("");
+          $("#message").val("");
+          $(".contact-btn").html("Submit");
         })
         .catch((err) => {
           console.log("error: " + err);
