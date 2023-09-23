@@ -48,62 +48,99 @@
       </header>
     </div>
 
-    <section class="registration">
-      <img src="./image/registartion.png" alt="" />
-      <div id="forms_div">
-        <h3>Register</h3>
+    <main class="row">
+      <section class="sec-3 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <img class="grad" src="./static/image/grad.png" alt="" />
+        <img class="starr" src="static/image/starr.png" alt="" />
+        <img src="static/image/registartion.png" alt="" class="idea" />
+      </section>
+
+      <section class="sec-4 col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+        <img class="grad2" src="./static/image/grad.png" alt="" />
+        <h2 class="title2">
+          <span class="text-design">Register</span>
+        </h2>
         <div class="part">Be part of this environment</div>
         <p>CREATE YOUR ACCOUNT</p>
         <div class="form">
-          <form action="">
-            <div class="label_div">
-              <label for="team_name" name="team_name">teams's Name</label>
+          <form action="" class="row">
+            <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <label for="name">Team's Name</label>
               <input
                 type="text"
-                id="team_name"
+                class="form-control"
+                id="name"
                 placeholder="Enter the name of your group"
               />
             </div>
-            <div class="label_div">
-              <label for="email" name="email">Email</label>
+
+            <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <label for="phone">Phone</label>
               <input
-                type="text"
-                id="email"
-                placeholder="Enter your email address"
-              />
-            </div>
-            <div class="label_div">
-              <label for="category" name="category">Category</label>
-              <select class="category" id="category" name="grade">
-                <option selected disabled>Select Category</option>
-              </select>
-            </div>
-            <div class="label_div">
-              <label for="phone_number">Phone</label>
-              <input
-                type="number"
-                id="phone_number"
+                type="tel"
+                class="form-control"
+                id="phone"
                 placeholder="Enter your phone number"
               />
             </div>
-            <div class="label_div">
-              <label for="project_topic">Project Topic</label>
+
+            <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <label for="email">Email</label>
               <input
-                type="text"
-                id="project_topic"
-                placeholder="What is your group progect topic"
+                type="email"
+                class="form-control"
+                id="email"
+                placeholder="Enter your Email address"
               />
             </div>
-            <div class="label_div">
-              <label for="group_size" name="group-size">Category</label>
-              <select class="group_size" id="group_size" name="grade">
-                <option selected disabled></option>
+
+            <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <label for="name">Project Topic</label>
+              <input
+                type="text"
+                class="form-control"
+                id="topic"
+                placeholder="what is your group project topic"
+              />
+            </div>
+
+            <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <label for="category">Category</label>
+              <select class="form-control" id="category">
+                <option selected disabled>Select Category</option>
               </select>
             </div>
+
+            <div class="form-group col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+              <label for="group_size">Group Size</label>
+              <select class="form-control" id="group_size">
+                <option selected disabled>Select</option>
+              </select>
+            </div>
+
+            <div
+              class="form-check col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-2"
+            >
+              <p class="text-design">
+                <i>Please review your registration details before submitting</i>
+              </p>
+              <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="" />
+                I agreed with the event terms and conditions and privacy policy
+              </label>
+            </div>
+
+            <button
+              class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-10"
+              type="submit"
+              id="register-btn"
+            >
+              Register Now
+            </button>
           </form>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <script>
       var cat_url = "https://backend.getlinked.ai/hackathon/categories-list";
