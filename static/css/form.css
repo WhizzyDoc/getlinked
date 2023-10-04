@@ -9,7 +9,6 @@ body{
     background-color: #f8f8f8;
 }
 .total_container{
-    position: fixed;
     width: 100%;
     max-width: 300px;
     margin: 0px auto;
@@ -166,7 +165,11 @@ top: -100000px;
 }
 .pagination button:hover, button[type="submit"]:hover{
     background-color: #ebe8e8;
+    outline-offset: 2px;
+    outline-style: solid;
+    outline-color: black;
 }
+
 button[type="submit"]{
     display: block;
     margin: 0 auto;
