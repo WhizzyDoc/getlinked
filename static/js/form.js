@@ -52,6 +52,9 @@ function validate_final() {
     check_box.checked;
   if (pattern) {
     swal("Success!", "Your form has been submitted", "success");
+    setTimeout(function () {
+      location.reload();
+    }, 2000);
   } else {
     swal("Oops!", "Invalid Entries", "error");
   }
