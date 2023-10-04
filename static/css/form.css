@@ -10,10 +10,10 @@ body{
 }
 .total_container{
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     margin: 0px auto;
     height: 100vh;
-    /* overflow: hidden; */
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,7 +24,7 @@ body{
 }
 @media screen and (min-width: 500px) {
     .total_container{
-        max-width: 400px;
+        max-width: 450px;
     }
 }
 
@@ -35,7 +35,7 @@ body{
 }
 form{
     width: 95%;
-    margin: 0 auto;
+    margin: 0px  auto;
     
 }
 fieldset{
