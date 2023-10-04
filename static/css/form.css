@@ -7,21 +7,20 @@ body{
     user-select: none;
     -webkit-user-select: none;
     background-color: #f8f8f8;
+     height: 100vh; 
+    overflow: hidden;
 }
 .total_container{
     padding: 0 10px;
     width: 95%;
     max-width: 350px;
     margin: 0px auto;
-    height: 100vh;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     box-shadow: 10px 0px 15px #eae6da, -10px 0px 15px #eae6da  ;
-  
 }
 @media screen and (min-width: 500px) {
     .total_container{
