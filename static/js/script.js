@@ -72,7 +72,7 @@ $(document).ready(function () {
       name != "" &&
       email != "" &&
       topic != "" &&
-      category != "" &&
+      // category != "" &&
       phone != "" &&
       group_size != "";
     //agree.is(":checked");
