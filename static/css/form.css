@@ -9,10 +9,12 @@ body{
     background-color: #f8f8f8;
 }
 .total_container{
+    position: fixed;
     width: 100%;
     max-width: 300px;
     margin: 0px auto;
     height: 100vh;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -33,7 +35,7 @@ body{
     
 }
 form{
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     
 }
