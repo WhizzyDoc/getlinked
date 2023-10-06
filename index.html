@@ -3,109 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Validate a Form Using Regex expression</title>
-    <link rel="stylesheet" href="./static/css/form.css" />
-    <script src="./static/js/sweetalert.min.js"></script>
-    <link rel="stylesheet" href="./static/css/sweetalert.min.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./password_generator.css" />
     <script src="./static/js/jquery.min.js"></script>
-    <link rel="stylesheet" href="./static/css/fontawesome.css" />
-    <link
-      rel="stylesheet"
-      href="./fontawesome-free-6.4.0-web/fontawesome/css/all.min.css"
-    />
   </head>
   <body>
-    <div class="total_container">
-      <h3 class="register">Registration Form</h3>
-
-      <form
-        action="#"
-        method="post"
-        novalidate
-        id="total_container"
-        name="my_form"
-      >
-        <div class="sub_container" id="sub_container1">
-          <fieldset>
-            <legend>Username</legend>
-            <input type="text" id="username" name="username" class="input" />
-          </fieldset>
-          <p class="condition">
-            <img src="./static/image/list terms(1).png" alt="" />
-            Username must be alphanumeric and contain 10 - 16 characters which
-            must start with at least (6-8) letters
-          </p>
-        </div>
-
-        <div class="sub_container" id="sub_container2">
-          <fieldset>
-            <legend>Email</legend>
-            <input type="text" id="email" name="email" class="input" />
-          </fieldset>
-          <p class="condition">
-            <img src="./static/image/list terms(1).png" alt="" />
-            Email must be a valid address, e.g. me@mydomain.com
-          </p>
-        </div>
-
-        <div class="sub_container" id="sub_container3">
-          <fieldset>
-            <legend>Password</legend>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              class="input"
-            />
-          </fieldset>
-          <p class="condition">
-            <img src="./static/image/list terms(1).png" alt="" />
-            Password must be alphanumeric (@._ and - are also allowed) and be 8
-            -20 characters
-          </p>
-        </div>
-
-        <div class="sub_container" id="sub_container4">
-          <fieldset>
-            <legend>Telephone</legend>
-            <input type="number" id="tel" name="tel" class="input" />
-          </fieldset>
-          <p class="condition">
-            <img src="./static/image/list terms(1).png" alt="" />
-            Telephone nust be a valid Nigera telephone number (11 digits)
-          </p>
-        </div>
-
-        <div class="sub_container" id="sub_container5">
-          <div id="image_case">
-            <img src="" alt="" id="result" accept=".jpg, .jpeg, .png" />
-            <label id="icon_case" for="image">
-              <i class="fa fa-camera-retro" class="icon"></i>
-            </label>
-          </div>
-
-          <input type="file" id="image" onchange="readFile()" />
-        </div>
-
-        <!-- last element that will show -->
-        <div class="sub_container" id="sub_container6">
-          <input type="checkbox" id="checkbox" value="Agree" />
-          <label for="checkbox" class="checkbox_text">
-            I agreed with the event terms and conditions and privacy policy
-          </label>
-
-          <button type="submit" class="submit">Submit</button>
-        </div>
-      </form>
-
-      <!-- pagination -->
-      <div class="pagination">
-        <button class="prev">Previous</button>
-        <button class="next">Next</button>
+    <div id="wrapper">
+      <div class="screen">
+        <input type="text" readonly class="generated_password" />
       </div>
-      <!-- total_container -->
+      <div class="input">
+        <div class="first_C">
+          <label for="length" class="length"> Length of password </label>
+          <input type="number" id="length" />
+        </div>
+        <div class="second_C">
+          <label for="capital_N" class="container">
+            Capital letters
+            <input type="checkbox" id="capital_N" class="capital_letter" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="third_C">
+          <label for="smaller_N" class="container">
+            Small letters
+            <input type="checkbox" id="smaller_N" class="small_letter" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="forth_C">
+          <label for="digit" class="container">
+            Numbers
+            <input type="checkbox" id="digit" class="digits" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <div class="fifth_C">
+          <label for="symbols" class="container">
+            Symbols
+            <input type="checkbox" id="symbols" class="symbols" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <div class="generate">Generate Password</div>
+      <p class="note">
+        Kindly click the checkbox above for me to know what to generate
+      </p>
     </div>
   </body>
-  <script src="./static/js/form.js"></script>
-  <script src="./static/js/form2.js"></script>
+  <script src="./password.js"></script>
 </html>

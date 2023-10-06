@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="checkbox" id="data1" />
+    <input type="checkbox" id="data2" />
+    <input type="checkbox" id="data3" />
+    <input type="checkbox" id="data4" />
+    <input type="checkbox" id="data5" />
+  </body>
+  <script>
+    var x = document.querySelectorAll("input");
+    x.forEach(function (eah_item) {
+      eah_item.addEventListener("click", function (e) {
+        var get = e.target.getAttribute("id");
+        if (eah_item.checked) {
+          alert(`you checked the checkbox with ${get} id`);
+        } else {
+          alert(`you unchecked the checkbox with ${get} id`);
+        }
+      });
+    });
+    for (var i = 0; i < x.length; i++) {
+      console.log(x[i]);
+      console.log(x[i].attributes.id);
+    }
+  </script>
+</html>
