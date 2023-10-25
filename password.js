@@ -6,7 +6,7 @@ var pattern = {
 };
 $(document).ready(function () {
   function show(y) {
-    return pattern[y][Math.floor(Math.random() * (pattern[y].length - 1))];
+    return pattern[y][Math.floor(Math.random() * pattern[y].length)];
   }
 
   function generate(password = "") {
@@ -46,4 +46,24 @@ $(document).ready(function () {
     const shuffled_string = charArray.join("");
     return shuffled_string;
   }
+
+  $(".icon").click(function(){
+    x = $(".generated_password");
+    x.select();
+    document.execCommand("copy");
+    if(x.val()!=""){
+      $(".copied_text").addClass("show")
+      setTimeout(()=>{
+       $(".copied_text").removeClass("show")
+      }, 1500)
+    }
+  })
+  
 });
+window.onbeforeunload = function(){
+  return "Are you sure you want to reload the page"
+}
+
+
+
+

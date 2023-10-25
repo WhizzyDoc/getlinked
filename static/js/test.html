@@ -11,12 +11,16 @@
     <input type="checkbox" id="data3" />
     <input type="checkbox" id="data4" />
     <input type="checkbox" id="data5" />
+    <p></p>
+    <p></p>
+    <p></p>
   </body>
   <script>
     var x = document.querySelectorAll("input");
     x.forEach(function (eah_item) {
       eah_item.addEventListener("click", function (e) {
-        var get = e.target.getAttribute("id");
+        var get = e.target.attributes.id.value;
+        //same as e.target.getAttribute("id")
         if (eah_item.checked) {
           alert(`you checked the checkbox with ${get} id`);
         } else {
@@ -26,7 +30,11 @@
     });
     for (var i = 0; i < x.length; i++) {
       console.log(x[i]);
-      console.log(x[i].attributes.id);
+      console.log(x[i].attributes.id.value);
+    }
+    var paragraph = document.getElementsByTagName("p");
+    for (var i = 0; i < paragraph.length; i++) {
+      paragraph[i].innerHTML = "i am a programmer";
     }
   </script>
 </html>

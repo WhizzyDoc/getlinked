@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent kehinde">
+      i love programming
+      <h3 class="child">i love javscript</h3>
+      i love React and Tailwind also
+    </div>
+  </body>
+  <script>
+    window.onbeforeunload = function () {
+      console.log("before unload");
+      return "Are you sure you want to leave the page";
+    };
+
+    var x = document.querySelector("div.parent");
+    console.log(x);
+    var get = x.attributes.class;
+    console.log(get.nodeValue);
+    console.log(get.nodeType);
+
+    console.log(x.firstChild.nodeValue);
+    console.log(x.firstChild.nodeName);
+    console.log(x.childNodes[1].childNodes[0].nodeValue);
+    console.log(x.childNodes[1].childNodes[0].nodeName);
+    console.log(x.childNodes[2].nodeValue);
+    console.log(x.childNodes[2].nodeName);
+
+    console.log(x.childNodes[1].nextSibling.nodeValue);
+
+    var add = document.createTextNode(" and Bootstrap");
+    x.childNodes[1].appendChild(add);
+
+    var create = document.createElement("h3");
+    var value = document.createTextNode("I am inside h3 tag");
+    create.appendChild(value);
+    x.appendChild(create);
+  </script>
+</html>
