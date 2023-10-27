@@ -55,7 +55,7 @@ $(document).ready(function () {
       $(".copied_text").addClass("show")
       setTimeout(()=>{
        $(".copied_text").removeClass("show")
-      }, 1500)
+      }, 1000)
     }
   })
   
