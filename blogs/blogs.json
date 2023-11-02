@@ -1,0 +1,40 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "title": "My second blog",
+      "body": "I am a front end dev",
+      "author": "sheriff_baba1"
+    },
+    {
+      "id": 2,
+      "title": "My third blog",
+      "body": "I am a programmer",
+      "author": "sheriff_baba2"
+    },
+    {
+      "id": 3,
+      "title": "my third blog",
+      "body": "hello world",
+      "author": "sheriff_baba3"
+    },
+    {
+      "id": 4,
+      "title": "my forth blog",
+      "body": "I love reactjs",
+      "author": "sheriff_baba4"
+    },
+    {
+      "id": 5,
+      "title": "my fifth blog",
+      "body": "i will be great",
+      "author": "sheriff_baba5"
+    },
+    {
+      "title": "my sixth blog",
+      "body": "i am a front end web developer",
+      "author": "sheriff_baba6",
+      "id": 6
+    }
+  ]
+}
